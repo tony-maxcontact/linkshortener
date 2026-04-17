@@ -29,9 +29,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className="h-full antialiased dark"
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className={cn(geistSans.variable, geistMono.variable, "min-h-full flex flex-col bg-background text-foreground font-sans")}>
         <ClerkProvider>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
