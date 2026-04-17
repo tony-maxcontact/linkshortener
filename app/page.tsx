@@ -60,11 +60,6 @@ export default function Home() {
               Get Started Free
             </Button>
           </SignUpButton>
-          <SignInButton mode="modal">
-            <Button variant="outline" size="lg" className="rounded-full h-11 px-6 text-base">
-              Sign In
-            </Button>
-          </SignInButton>
         </div>
       </section>
 
