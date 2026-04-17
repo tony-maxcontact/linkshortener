@@ -33,9 +33,10 @@ Identify ALL topics relevant to the task, then read EVERY corresponding doc file
 6. **No raw SQL.** Use the Drizzle query builder via `db` from `@/db`.
 7. **No custom auth.** Never implement session handling, password storage, or JWT logic — Clerk owns this.
 8. **Modal auth only.** Sign in and sign up must use `mode="modal"` on Clerk's buttons — no dedicated auth pages.
-9. **Protected routes.** `/dashboard` requires authentication; unauthenticated access must be blocked in middleware.
-10. **Homepage redirect.** Authenticated users visiting `/` must be redirected to `/dashboard` in middleware.
-11. **`cn()` for class merging.** Never concatenate Tailwind class strings — use `cn()` from `@/lib/utils`.
-12. **shadcn components via CLI.** Add new UI components with `npx shadcn add <component>`, not by hand.
-13. **No secrets in code.** All environment variables live in `.env.local`. Never hardcode credentials.
+9. **⚠️ USE PROXY.TS, NOT MIDDLEWARE.TS.** `middleware.ts` is deprecated in this project. All routing logic, auth protection, and redirects must be implemented in `proxy.ts`. Never modify or reference `middleware.ts`.
+10. **Protected routes.** `/dashboard` requires authentication; unauthenticated access must be blocked in proxy.
+11. **Homepage redirect.** Authenticated users visiting `/` must be redirected to `/dashboard` in proxy.
+12. **`cn()` for class merging.** Never concatenate Tailwind class strings — use `cn()` from `@/lib/utils`.
+13. **shadcn components via CLI.** Add new UI components with `npx shadcn add <component>`, not by hand.
+14. **No secrets in code.** All environment variables live in `.env.local`. Never hardcode credentials.
 

@@ -52,7 +52,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <SignUpButton mode="modal">
+          <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
             <Button
               size="lg"
               className="bg-[#6c47ff] text-white hover:bg-[#5a3adb] rounded-full h-11 px-6 text-base"
@@ -99,7 +99,7 @@ export default function Home() {
             Join today and start shortening, sharing, and tracking your links
             for free.
           </p>
-          <SignUpButton mode="modal">
+          <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
             <Button
               size="lg"
               className="bg-[#6c47ff] text-white hover:bg-[#5a3adb] rounded-full h-11 px-8 text-base"
