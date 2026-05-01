@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "cmd": "node .github/hooks/scripts/format-on-edit.js"
+      }
+    ]
+  }
+}

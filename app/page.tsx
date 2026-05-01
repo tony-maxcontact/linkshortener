@@ -1,32 +1,26 @@
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
-import { Button } from "@/components/ui/button";
-import { Link2, BarChart2, LayoutDashboard, Share2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { SignInButton, SignUpButton } from '@clerk/nextjs';
+import { Button } from '@/components/ui/button';
+import { Link2, LayoutDashboard, Share2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const features = [
   {
     icon: Link2,
-    title: "Shorten Links",
+    title: 'Shorten Links',
     description:
-      "Turn long, unwieldy URLs into clean, memorable short links in seconds.",
-  },
-  {
-    icon: BarChart2,
-    title: "Track Analytics",
-    description:
-      "Monitor clicks and traffic in real-time so you always know how your links perform.",
+      'Turn long, unwieldy URLs into clean, memorable short links in seconds.',
   },
   {
     icon: LayoutDashboard,
-    title: "Manage Everything",
+    title: 'Manage Everything',
     description:
-      "View, edit, and organise all your shortened links from a single dashboard.",
+      'View, edit, and organise all your shortened links from a single dashboard.',
   },
   {
     icon: Share2,
-    title: "Share Anywhere",
+    title: 'Share Anywhere',
     description:
-      "Paste your short links into emails, social posts, or messages — they work everywhere.",
+      'Paste your short links into emails, social posts, or messages — they work everywhere.',
   },
 ];
 
@@ -41,14 +35,12 @@ export default function Home() {
         </div>
 
         <h1 className="max-w-3xl text-5xl font-bold tracking-tight sm:text-6xl">
-          Shorten.{" "}
-          <span className="text-[#6c47ff]">Share.</span>{" "}
-          Track.
+          Shorten. <span className="text-[#6c47ff]">Share.</span> Manage.
         </h1>
 
         <p className="max-w-xl text-lg text-muted-foreground">
-          Create short, branded links in seconds. Track every click with
-          real-time analytics and manage all your URLs from one place.
+          Create short, branded links in seconds and manage all your URLs from
+          one place.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
@@ -68,13 +60,13 @@ export default function Home() {
         <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
           Everything you need to manage your links
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
               className={cn(
-                "flex flex-col gap-3 rounded-xl border border-border bg-card p-6",
-                "transition-colors hover:border-[#6c47ff]/50 hover:bg-card/80"
+                'flex flex-col gap-3 rounded-xl border border-border bg-card p-6',
+                'transition-colors hover:border-[#6c47ff]/50 hover:bg-card/80',
               )}
             >
               <div className="flex size-10 items-center justify-center rounded-lg bg-[#6c47ff]/10 text-[#6c47ff]">
@@ -89,15 +81,12 @@ export default function Home() {
 
       {/* CTA */}
       <section className="w-full max-w-5xl px-4 pb-24">
-        <div
-          className="flex flex-col items-center gap-6 rounded-2xl border border-[#6c47ff]/30 bg-[#6c47ff]/5 px-6 py-16 text-center"
-        >
+        <div className="flex flex-col items-center gap-6 rounded-2xl border border-[#6c47ff]/30 bg-[#6c47ff]/5 px-6 py-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight">
             Ready to get started?
           </h2>
           <p className="max-w-md text-muted-foreground">
-            Join today and start shortening, sharing, and tracking your links
-            for free.
+            Join today and start shortening and sharing your links for free.
           </p>
           <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
             <Button

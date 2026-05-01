@@ -1,9 +1,9 @@
 import {
-    pgTable,
-    text,
-    timestamp,
-    integer,
-    varchar
+  pgTable,
+  text,
+  timestamp,
+  integer,
+  varchar,
 } from 'drizzle-orm/pg-core';
 
 export const links = pgTable('links', {

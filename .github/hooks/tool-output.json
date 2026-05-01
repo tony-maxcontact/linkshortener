@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "powershell": "$input | Out-File -FilePath \"tmp\\$(Get-Date -UFormat %s).json\" -Encoding utf8"
+      }
+    ]
+  }
+}
